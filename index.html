@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #a7114b;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
+    <div class="content">
+        <a href="https://xtwphrh.flirtauraspase.one/g2t2cdv?t=NARUTO&cid=NAKULA" class="button">WhatsApp</a>
+        <a href="https://xtwphrh.easycasualdate.com/g2w2cd2?t=NARUTO_N1&cid=ARJUNA" class="button">Twitch Live</a>
+        <a href="https://vnanxl.admirabledates.net/?utm_source=da57dc555e50572d&&ban=inst&j1=1&s1=226805&s2=2083622&s3=NARUTO&click_id=NARUTO" class="button">Private Content</a>
+    </div>
+
+    <script>
+        // Geo-blocking to restrict access from Indonesia
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.country === 'ID') {
+                    document.body.innerHTML = "<h1 style='text-align: center; color: red;'>Access Denied</h1>";
+                }
+            })
+            .catch(error => console.error('Error fetching IP data:', error));
+    </script>
+</body>
+</html>
